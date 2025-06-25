@@ -1,5 +1,9 @@
 import axios from "axios";
-const API_URL = "http://127.0.0.1:8080/api/courses";
+// const API_URL = "http://127.0.0.1:8080/api/courses";
+
+// 從環境變數讀取後端 base URL（開發和部署共用）
+const BASE_URL = process.env.REACT_APP_API_URL || "http://127.0.0.1:8080";
+const API_URL = `${BASE_URL}/api/courses`;
 
 class CourseService {
   post(title, description, price) {
