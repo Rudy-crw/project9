@@ -15,6 +15,7 @@ router.get("/testAPI", (req, res) => {
 
 router.post("/register", async (req, res) => {
   //註冊確認數據是否符合規範
+  console.log("收到註冊資料", req.body);
   let { error } = registerValidation(req.body);
   if (error) return res.status(400).send(error.details[0].message);
 
