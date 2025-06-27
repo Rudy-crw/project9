@@ -26,7 +26,7 @@ app.use(
   cors({
     origin: [
       "http://localhost:3000",
-      "https://project9-client-nw89.onrender.com/", // 你的前端 Render 網址
+      "https://project9-client-nw89.onrender.com", // 你的前端 Render 網址
     ],
     credentials: true,
   })
